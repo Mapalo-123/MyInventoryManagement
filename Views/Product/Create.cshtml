@@ -1,0 +1,32 @@
+﻿
+@model MyInventoryManagement.Models.Product
+
+<h2>Add New Product</h2>
+
+@using (Html.BeginForm())
+{
+    <table cellpadding="8">
+        <tr>
+            <td>Product Name:</td>
+            <td>@Html.TextBoxFor(m => m.ProductName)</td>
+        </tr>
+
+        <tr>
+            <td>Quantity:</td>
+            <td>@Html.TextBoxFor(m => m.Quantity)</td>
+        </tr>
+
+        <tr>
+            <td>Price:</td>
+            <td>@Html.TextBoxFor(m => m.Price)</td>
+        </tr>
+
+        <tr>
+            <td colspan="2">
+                <input type="submit" value="Save Product" />
+                @Html.ActionLink("Back", "Index")
+            </td>
+        </tr>
+    </table>
+}
+
